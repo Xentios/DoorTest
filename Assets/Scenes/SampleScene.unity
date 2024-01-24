@@ -190,7 +190,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 5d1b896bc311a1d438c929c45b0c5fbc, type: 2}
+  - {fileID: 2100000, guid: 58d303d61f5e08849b453a3bdc155e8e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -251,7 +251,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604d6c1936cd31c418c7c0391f5ab9b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interpolationDataSource: 0
 --- !u!114 &376075584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,22 +263,10 @@ MonoBehaviour:
   m_Script: {fileID: 158639473, guid: e725a070cec140c4caffb81624c8c787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interpolationDataSource: 0
-  InterpolationSpace: 0
-  InterpolationTarget: {fileID: 1214620408}
-  InterpolateErrorCorrection: 1
-  InterpolatedErrorCorrectionSettings:
-    MinRate: 3.3
-    MaxRate: 10
-    PosBlendStart: 0.25
-    PosBlendEnd: 1
-    PosMinCorrection: 0.025
-    PosTeleportDistance: 2
-    RotBlendStart: 0.1
-    RotBlendEnd: 0.5
-    RotTeleportRadians: 1.5
-  UseLegacySharedModeInterpolation: 0
-  TargetInterpolationDelay: 0.03
+  SyncScale: 0
+  SyncParent: 0
+  _autoAOIOverride: 1
+  DisableSharedModeInterpolation: 0
 --- !u!114 &376075585
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -292,19 +279,13 @@ MonoBehaviour:
   m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SortKey: 4015064169
   ObjectInterest: 1
-  DefaultInterestGroups: []
-  DestroyWhenStateAuthorityLeaves: 0
-  AllowStateAuthorityOverride: 1
-  AoiPositionSource: {fileID: 0}
-  Flags: 2561
-  NetworkGuid:
-    RawGuidValue: 9349ca454626480f91169555f41f96bb
+  Flags: 264705
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 376075584}
   - {fileID: 376075583}
-  SimulationBehaviours: []
 --- !u!4 &376075586
 Transform:
   m_ObjectHideFlags: 0
@@ -598,7 +579,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604d6c1936cd31c418c7c0391f5ab9b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interpolationDataSource: 0
 --- !u!114 &667407469
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -611,22 +591,10 @@ MonoBehaviour:
   m_Script: {fileID: 158639473, guid: e725a070cec140c4caffb81624c8c787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interpolationDataSource: 0
-  InterpolationSpace: 0
-  InterpolationTarget: {fileID: 88457069}
-  InterpolateErrorCorrection: 1
-  InterpolatedErrorCorrectionSettings:
-    MinRate: 3.3
-    MaxRate: 10
-    PosBlendStart: 0.25
-    PosBlendEnd: 1
-    PosMinCorrection: 0.025
-    PosTeleportDistance: 2
-    RotBlendStart: 0.1
-    RotBlendEnd: 0.5
-    RotTeleportRadians: 1.5
-  UseLegacySharedModeInterpolation: 1
-  TargetInterpolationDelay: 0.03
+  SyncScale: 0
+  SyncParent: 0
+  _autoAOIOverride: 1
+  DisableSharedModeInterpolation: 0
 --- !u!114 &667407470
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -639,19 +607,13 @@ MonoBehaviour:
   m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SortKey: 3534168079
   ObjectInterest: 1
-  DefaultInterestGroups: []
-  DestroyWhenStateAuthorityLeaves: 0
-  AllowStateAuthorityOverride: 1
-  AoiPositionSource: {fileID: 0}
-  Flags: 2561
-  NetworkGuid:
-    RawGuidValue: 7b5aaa2a0fbb4432ade3702828facdf6
+  Flags: 264705
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 667407469}
   - {fileID: 667407468}
-  SimulationBehaviours: []
 --- !u!4 &667407471
 Transform:
   m_ObjectHideFlags: 0
@@ -955,6 +917,15 @@ MonoBehaviour:
   OnReliableData:
     m_PersistentCalls:
       m_Calls: []
+  OnReliableProgress:
+    m_PersistentCalls:
+      m_Calls: []
+  OnObjectEnterAOI:
+    m_PersistentCalls:
+      m_Calls: []
+  OnObjectExitAOI:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &912198074
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -967,11 +938,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b55a6ca2d069a447a0201119c57bc9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Sequence: 0
-  BlockingLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  BlockedCheckRadius: 2
 --- !u!114 &912198075
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -984,9 +950,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2e361bfb0186044286ddbd94f2546dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PlayerPrefab: {fileID: 8815895893571785555, guid: e4df49d0bf125a740a2c14ab6e887572, type: 3}
-  SpawnMethod: 0
-  StateAuthority: 0
 --- !u!114 &912198076
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1093,7 +1056,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 2544ff8e0cb0b4649ad11a93d3259ffa, type: 2}
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1220,10 +1183,6 @@ MonoBehaviour:
   m_Script: {fileID: 2103778458, guid: e725a070cec140c4caffb81624c8c787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  PreferredRunner: 0
-  Components:
-  - {fileID: 963194226}
-  _guid: 8e04b48e-79d6-4a36-
 --- !u!1 &1214620407
 GameObject:
   m_ObjectHideFlags: 0
@@ -1291,7 +1250,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 38fbbd3db9e06c54e8a11016e2381469, type: 2}
+  - {fileID: 2100000, guid: d8d39d2abb00fd5429bd3ca5c9411fa8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1370,6 +1329,7 @@ MonoBehaviour:
   AutoStartAs: 2
   AutoHideGUI: 1
   AutoClients: 1
+  ClientStartDelay: 0.1
   ServerPort: 27015
   DefaultRoomName: 
   AlwaysShowStats: 0
@@ -1658,22 +1618,10 @@ MonoBehaviour:
   m_Script: {fileID: 158639473, guid: e725a070cec140c4caffb81624c8c787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interpolationDataSource: 3
-  InterpolationSpace: 0
-  InterpolationTarget: {fileID: 956022912}
-  InterpolateErrorCorrection: 1
-  InterpolatedErrorCorrectionSettings:
-    MinRate: 3.3
-    MaxRate: 10
-    PosBlendStart: 0.25
-    PosBlendEnd: 1
-    PosMinCorrection: 0.025
-    PosTeleportDistance: 2
-    RotBlendStart: 0.1
-    RotBlendEnd: 0.5
-    RotTeleportRadians: 1.5
-  UseLegacySharedModeInterpolation: 0
-  TargetInterpolationDelay: 0.03
+  SyncScale: 0
+  SyncParent: 0
+  _autoAOIOverride: 1
+  DisableSharedModeInterpolation: 0
 --- !u!114 &1703388557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1686,19 +1634,13 @@ MonoBehaviour:
   m_Script: {fileID: -1552182283, guid: e725a070cec140c4caffb81624c8c787, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  SortKey: 4031883167
   ObjectInterest: 1
-  DefaultInterestGroups: []
-  DestroyWhenStateAuthorityLeaves: 0
-  AllowStateAuthorityOverride: 1
-  AoiPositionSource: {fileID: 0}
-  Flags: 2561
-  NetworkGuid:
-    RawGuidValue: fd34a80fc6fc4dd8b50f6482a3b9e54e
+  Flags: 264705
   NestedObjects: []
   NetworkedBehaviours:
   - {fileID: 1703388556}
   - {fileID: 1703388559}
-  SimulationBehaviours: []
 --- !u!4 &1703388558
 Transform:
   m_ObjectHideFlags: 0
@@ -1727,7 +1669,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 604d6c1936cd31c418c7c0391f5ab9b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _interpolationDataSource: 3
 --- !u!1 &1721172811
 GameObject:
   m_ObjectHideFlags: 0
@@ -1811,7 +1752,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 002db72054162e04b917e86a395e0a0f, type: 2}
+  - {fileID: 2100000, guid: 58d303d61f5e08849b453a3bdc155e8e, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
